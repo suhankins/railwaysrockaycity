@@ -1,22 +1,61 @@
+---
+// @ts-nocheck
+// Not typechecking the whole file is the only way I found to make TS
+// not complain about "width" property on <td>
+import Ad from '../components/Ad.astro';
+import Contacts from '../components/Contacts.astro';
+import Logo from '../components/Logo.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/gif" href="/favicon.gif" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Rockay City Subway</title>
+    </head>
+    <body>
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <Logo />
+                    </td>
+                </tr>
+                <tr>
+                    <td width="195">
+                        <Navigation />
+                        <br />
+                        <Ad />
+                        <br />
+                        <br />
+                        <Contacts />
+                    </td>
+                    <td align="center" valign="top" width="566"><slot /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="right">
+                        <i>
+                            Made by
+                            <a href="https://github.com/suhankins"
+                                >Punished Bernadetta</a
+                            >. This website is not affiliated with In-Game
+                            Studios or 505 Games.
+                        </i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
 </style>

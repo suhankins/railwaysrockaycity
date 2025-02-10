@@ -1,11 +1,25 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+    <marquee>ROCKAY CENTRAL STATION CLOSED FOR MAINTENANCE</marquee>
+    <img
+        src="/assets/serving.gif"
+        alt="Rockay City Subway: Serving you day and night"
+    />
+    <p>
+        <b>Welcome</b> to the official page of Rockay City Subway, your best source
+        for most up-to-date news on operations of the fastest way to get around our
+        wonderful city!
+    </p>
 </Layout>
+
+<style>
+    marquee {
+        color: red;
+        background-color: black;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+</style>

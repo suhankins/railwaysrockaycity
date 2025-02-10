@@ -1,0 +1,35 @@
+---
+// @ts-nocheck
+// Not typechecking the whole file is the only way I found to make TS
+// not complain about "name" property on <img>
+interface Props {
+    name: string;
+    alt: string;
+    href: string;
+}
+
+const { alt, name, href } = Astro.props;
+---
+
+<tr>
+    <td>
+        <a href={href}>
+            <img
+                src={`/buttons/button-${name}.gif`}
+                name={name}
+                alt={alt}
+                onmouseover="onMouseOver(this)"
+                onmouseleave="onMouseLeave(this)"
+            />
+        </a>
+    </td>
+</tr>
+
+<script is:inline>
+    function onMouseOver(img) {
+        img.src = '/buttons/button-' + img.name + '-selected.gif';
+    }
+    function onMouseLeave(img) {
+        img.src = '/buttons/button-' + img.name + '.gif';
+    }
+</script>
