@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://railwayrockaycity.com/sitemap-index.xml
