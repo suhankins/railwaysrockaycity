@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout title="About">
     <h1>About us</h1>
-    <div>
+    <main class="main">
         <ul>
             <li>Serving <b>over 2 million passengers</b> daily.</li>
             <li>
@@ -23,11 +23,11 @@ import Layout from '../../layouts/Layout.astro';
             From fastest passenger trains to Rockay Money Express, you can be
             sure that your trip will be smooth as butter.
         </p>
-    </div>
+    </main>
 </Layout>
 
-<style>
-    div {
+<style is:inline>
+    .main {
         text-align: left;
         margin-left: 5px;
     }

@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Careers">
     <h1>Careers</h1>
     <p>Rockay City Subway is always hiring!</p>
-    <article>
+    <article class="job">
         <h2>Janitor</h2>
         <p>District: Beautiful Ridge</p>
         <p>Required experience: 15 years</p>
@@ -14,7 +14,7 @@ import Layout from '../../layouts/Layout.astro';
             gold depot.
         </p>
     </article>
-    <article>
+    <article class="job">
         <h2>Night Guard</h2>
         <p>District: Any</p>
         <p>Required experience: 20 years</p>
@@ -25,8 +25,8 @@ import Layout from '../../layouts/Layout.astro';
     </article>
 </Layout>
 
-<style>
-    article {
+<style is:inline>
+    .job {
         text-align: left;
     }
 </style>

@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-    <marquee>ROCKAY CENTRAL STATION CLOSED FOR MAINTENANCE</marquee>
+    <marquee class="announcement">ROCKAY CENTRAL STATION CLOSED FOR MAINTENANCE</marquee>
     <img
         src="/assets/serving.gif"
         alt="Rockay City Subway: Serving you day and night"
@@ -15,8 +15,8 @@ import Layout from '../layouts/Layout.astro';
     </p>
 </Layout>
 
-<style>
-    marquee {
+<style is:inline>
+    .announcement {
         color: red;
         background-color: black;
         padding-top: 5px;
