@@ -68,3 +68,12 @@ const title = `${providedTitle ? `${providedTitle} | ` : ''}Rockay City Subway`
         margin: 0;
     }
 </style>
+
+<script is:inline>
+    function onMouseOver(img) {
+        img.src = '/buttons/button-' + img.name + '-selected.gif';
+    }
+    function onMouseLeave(img) {
+        img.src = '/buttons/button-' + img.name + '.gif';
+    }
+</script>

@@ -24,12 +24,3 @@ const { alt, name, href } = Astro.props;
         </a>
     </td>
 </tr>
-
-<script is:inline>
-    function onMouseOver(img) {
-        img.src = '/buttons/button-' + img.name + '-selected.gif';
-    }
-    function onMouseLeave(img) {
-        img.src = '/buttons/button-' + img.name + '.gif';
-    }
-</script>
